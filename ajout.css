@@ -1,0 +1,22 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(image/image12.jpg);
+    -webkit-background-size:cover;
+    background-size:cover ;
+    font-family:Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    display: block;
+}
+.classform{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform:translate(-30%,-30%) ;
+    box-sizing: border-box;
+    background-color: #4D7FBA;
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+}

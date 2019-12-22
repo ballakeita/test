@@ -1,0 +1,21 @@
+body{
+    background-image: url(image/image15.jpg);
+    
+}
+.menu li a:hover{
+   background-color: olive;
+   margin-left: 0px;
+}
+.menu li{
+    display: inline;
+    padding: 10px 80px;
+    background-color:lightcoral;
+
+  }
+  .menu{
+      text-align: center;
+  }
+  h1{
+      text-align: center;
+      left:200px;
+  }
