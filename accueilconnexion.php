@@ -4,20 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-<style>
-    .menu li a:hover{
-       background-color: olive;
-       margin-left: 0px;
-    }
-    .menu li{
-        display: inline;
-        padding: 10px 80px;
-        background: #2D96F2;
-      }
-      h1{
-          left:200px;
-      }</style>
+    <link rel="stylesheet" href="./style/accueilconnexion.css">
+    <title>insim-market.to</title>
       </head>
 <body>
 <header>
@@ -28,6 +16,7 @@
 </ul>
     </header>
     <?php
+
 require_once('article.php');
 ?>
  

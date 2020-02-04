@@ -25,8 +25,8 @@ if(isset($_POST['formconnexion'])){
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>connexion</title>
-    <link rel="stylesheet" href="connexion.css">
+    <title>insim-market.to</title>
+    <link rel="stylesheet" href="./style/connexion.css">
 </head>
 <body>
     <div class="bodyconnexion">

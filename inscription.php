@@ -36,8 +36,8 @@ if (isset($_POST['forminscription'])){
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>inscription</title>
-<link rel="stylesheet" href="inscription.css">
+    <title>insim-market.to</title>
+<link rel="stylesheet" href="./style/inscription.css">
 </head>
 <body class="bodyins">
     <div class="form">

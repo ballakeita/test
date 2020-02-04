@@ -1,73 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="./style/article.css">
+    <title>insim-market.to</title>
 </head>
 <body>
-<!-- <h1>Ajout de produit</h1> -->
-    <!-- <form action="boutique.php" method="POST" >
-        Titre: <input type="text" name="titre">
-        Descriptions: <input type="text" name="descriptions">
-        Prix: <input type="text" name="Prix">
-    <button type="submit" name="submit" value="publier"></button>
-    </form> -->
-    <!-- <ul>
-        <?php
-         $bdd= new PDO('mysql:host=localhost;dbname=site_ecommerce','root','root');
-         $ajout=("SELECT * FROM articles_produits ORDER BY id");
-         $result=$bdd->query($ajout);
-         while($row = $result->fetch()){
-             ?>
-             <li><a href="#"></a> <?php echo stripcslashes($row["titre"]) ?> </li>
-             <?php
-         }
-         
+    
+
+<?php 
+    try
+{
+    $bdd= new PDO('mysql:host=localhost;dbname=site_ecommerce','root','root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(Exception $e){
+   echo'erreur sourvenue';
+   die();
+}
+    $select=("SELECT * FROM articles_produits ");
+    // $select->execute();
+    $result=$bdd->query($select);
+   // $data=$result->fetchAll();
+    
+    while($s=$result->fetch(PDO::FETCH_OBJ)){
+
         ?>
 
+<br><div align="center">
+<!-- <h1>id :<?php echo $s->id ; ?> -->
+<img src="./image/imagei.jpg" alt="kk" width="110" height="110" >
+<h2>nom :<?php  echo $s->titre; ?></h2>
+<h4> prix :<?php   echo $s->Prix; ?>Dinars</h4>
+<h5>description :<?php   echo $s->descriptions; ?></h5>
+<!-- recuperation avec un formulaire -->
+<!-- 
+<form action="panier.php" method="Post">
+<input type="text" name="id" value="<?php echo $s->id ; ?>"> 
+<input type="text" name="titre" value="<?php  echo $s->titre; ?>">
+<input type="text" name="Prix" value="<?php   echo $s->Prix; ?>">
+<input type="text" name="descriptions" value="<?php   echo $s->descriptions; ?>"> </br>
+<input type="submit" value="ajouter panier">
 
 
-    </ul> -->
+</form> -->
 
- <div class="contenu">
- 
-  
-    <table class="table">
-    <caption>  <h1>liste des produits</h1></caption>
-<tr>
-    <th><h3>ID</h3></th>
-    <th><h3>Tritre</h3></th>
-    <th><h3>Prix</h3></th>
-    <th><h3>Descriptions</h3></th>
-</tr>
-    <?php 
-    $bdd= new PDO('mysql:host=localhost;dbname=site_ecommerce','root','root');
-    $ajout=("SELECT * FROM articles_produits");
-    $result=$bdd->query($ajout);
-    $data=$result->fetchAll();
-    for($i=0;$i<count($data);$i++){
-        $id=$data{$i}['id'];
-        $titre= $data{$i}['titre'];
-        $descriptions= $data{$i}['descriptions'];
-        $Prix=$data{$i}['Prix'];
-        echo"<tr><td>$id</td><td><input type='checkbox' id='checkbox'>$titre</td><td>$Prix.dinars</td><td>$descriptions</td></tr>";
-        
-    }
-    ?>
+<a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '', 
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
 
-    </table>
-    <div class="acheter">
-        <button type="submit" value="Acheter" onclick="bouton()">Acheter</button>
-    </div>
-</div> 
+<br><br>
+</div>
+
+<?php
+}
+?>
 </body>
 </html>
-<script>
-    function bouton(){
-         console.log("veillez vous connectez d'abord !!");  
-    }
-</script>

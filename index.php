@@ -11,7 +11,7 @@
 
 <?php
 require_once('accueil.php');
-require_once('article.php');
+require_once('articleconnexion.php');
 echo " <br/>";
 require_once('footer.php');
 ?>
