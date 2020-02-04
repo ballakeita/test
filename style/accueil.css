@@ -1,0 +1,26 @@
+body{
+    /* background-image: url(image/image17.jpg);
+    background-repeat:no-repeat;
+     */
+    
+    
+}
+.menu li a:hover{
+   background-color: beige;
+   margin-left: 0px;
+}
+.menu li{
+    display: inline;
+    padding: 10px 80px;
+    background-color:#4D7FBA;
+    border-radius: 40%;
+
+
+  }
+  .menu{
+      text-align: center;
+  }
+  h1{
+      text-align: center;
+      left:200px;
+  }

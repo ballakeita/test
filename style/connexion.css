@@ -1,0 +1,27 @@
+body{
+    background-color: ghostwhite;
+    /* background-image: url(image/image15.jpg); */
+}
+
+.bodyconnexion{
+    margin: 0px;
+    padding: 0px;
+    /* background-image: url(image/image13.jpg); */
+    -webkit-background-size:cover;
+    background-size:cover ;
+    font-family:Tahoma, Geneva, Verdana, sans-serif;
+}
+.classform{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform:translate(-30%,-30%) ;
+    box-sizing: border-box;
+    background-color: rgb(104, 151, 206);
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+input:focus{
+    background-color:turquoise;
+}
